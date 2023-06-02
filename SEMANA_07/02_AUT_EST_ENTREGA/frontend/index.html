@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Currículo</title>
+  <link rel="stylesheet" href="estilo.css">
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+</head>
+<body>
+ <div class="container">
+  <header>
+    <div class="header-container">
+      <img src="https://pbs.twimg.com/profile_images/1531810783117594626/ljZzGm4v_400x400.jpg" alt="Foto de Perfil">
+      <h1 id="nome">Carlos Felino</h1>
+    </div>
+    <div>
+      <button id="btn">Alterar cor</button>
+     </div>
+  </header>
+  <section class="sobre">
+    <h2>Sobre</h2>
+    <p><strong>Descrição: </strong>Eu sou o melhor, se você me contratar será a melhor decisão da sua vida.</p>
+    <p><strong>E-mail: </strong>carlos.felino@gmail.com</p>
+    <p><strong>Telefone: </strong>(11) 4002-8922</p>
+    <p><strong>Endereço: </strong>Rua das flores, 56</p>
+  </section>
+  
+  <section class="formacao">
+    <h2>Formação</h2>
+    <div class="formacao-item">
+      <p><strong>Curso: </strong>Curso de Informática Avançada</p>
+      <p><strong>Data de Início: </strong>09/02/2017</p>
+      <p><strong>Data de Fim: </strong>09/02/2021</p>
+      <p><strong>Descrição: </strong>O melhor curso que eu já fiz</p>
+    </div>
+  </section>
+  
+  <section class="experiencia">
+    <h2>Experiência</h2>
+    <div class="experiencia-item">
+      <p><strong>Nome da empresa: </strong><span data-experiencia-nome></span></p>
+      <p><strong>Data de Início: </strong><span data-experiencia-datainicio></span></p>
+      <p><strong>Data de Fim: </strong><span data-experiencia-datafim></span></p>
+      <p><strong>Cargo: </strong><span data-experiencia-cargo></span></p>
+      <p><strong>Descrição: </strong><span data-experiencia-descricao></span></p>
+    </div>
+  </section>
+  
+  <section class="habilidades">
+    <h2>Habilidades</h2>
+    <ul>
+      <li>Amor</li>
+      <li>Bom gosto</li>
+      <li>Humildade</li>
+    </ul>
+  </section>
+  
+  <section class="realizacoes">
+    <h2>Realizações</h2>
+    <div class="realizacao-item">
+      <h3>Voluntário do bem</h3>
+      <p><strong>Instituição: </strong>Grupo dos alcoólicos anônimos</p>
+      <p><strong>Ano: </strong>2015</p>
+      <p><strong>Descrição: </strong>Ajudava as pessoas a se livrarem do álcool</p>
+    </div>
+  </section>
+</div>
+
+  <script>
+    $(document).ready(function(){
+      $('header').hide();
+      $('header').fadeIn(1000);
+      $('.sobre').hide();
+      $('.sobre').fadeIn(2000);
+      $('.formacao').hide();
+      $('.formacao').fadeIn(3000);
+      $('.experiencia').hide();
+      $('.experiencia').fadeIn(4000);
+      $('.habilidades').hide();
+      $('.habilidades').fadeIn(5000);
+      $('.realizacoes').hide();
+      $('.realizacoes').fadeIn(5500);
+    });
+    $('#btn').click(function(){
+      $('body').css('background-color', 'green');
+      $('.header-container').css('background-color', 'green');
+      $('#btn').css('background-color', 'green');
+    });
+    $('#btn').dblclick(function(){
+      $('body').css('background-color', 'rgb(33, 119, 195)');
+      $('.header-container').css('background-color', 'rgb(33, 119, 195)');
+      $('#btn').css('background-color', 'rgb(33, 119, 195)');
+    });
+  </script>
+
+<script src="script.js" defer></script>
+</body>
+</html>
